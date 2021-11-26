@@ -1,0 +1,64 @@
+.yellow-btn {
+    background: #feba00;
+    box-shadow: 1.6rem 1.6rem 4rem rgba(0, 0, 0, 0.06);
+    border-radius: 0.4rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1.4rem 4rem;
+    transition: background-color 0.2s, color 0.2s;
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &--wide {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--white-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--brown-color);
+    }
+}
+
+.outline-btn {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 150%;
+    text-transform: uppercase;
+    border: 0.4rem solid var(--primary-color);
+    background: var(--white-color);
+    box-shadow: 0.4rem 0.8rem 2.4rem rgba(0, 0, 0, 0.06);
+    border-radius: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    transition: background-color 0.2s, color 0.2s;
+    padding: 1.6rem 4rem;
+
+    &--wide {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--text-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+}

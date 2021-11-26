@@ -1,0 +1,74 @@
+.geography {
+    margin-bottom: 10rem;
+}
+
+.geography__map {
+    margin-bottom: 8rem;
+    min-height: 48rem;
+    position: relative;
+    z-index: 1;
+    padding: 7rem 2rem;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.geography__map-image-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 1rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    box-shadow: 0.4rem 0.8rem 2.4rem rgba(0, 0, 0, 0.06);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(252, 252, 252, 0.2), rgba(252, 252, 252, 0.2));
+    }
+}
+
+.geography__map-title {
+    max-width: 62rem;
+}
+
+.geography__numbers {
+    max-width: 102.4rem;
+    width: 100%;
+    margin-left: auto;
+}
+
+.geography__numbers-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-right: 10rem;
+    grid-gap: 4rem;
+    grid-row-gap: 8rem;
+    margin-bottom: 7rem;
+}
+
+.geography__numbers-card-digit {
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 150%;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.geography__numbers-card-text {
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 150%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}

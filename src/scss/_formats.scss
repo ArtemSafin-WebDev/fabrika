@@ -1,0 +1,94 @@
+.formats {
+    margin-bottom: 16rem;
+}
+
+.formats__heading {
+    margin-bottom: 4.5rem;
+}
+
+.formats__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+    grid-row-gap: 5.5rem;
+    margin-bottom: 10rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.formats__card-image-container {
+    position: relative;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    margin-bottom: 2rem;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 48%;
+    }
+}
+
+.formats__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formats__card-title {
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.formats__ages-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 6rem;
+}
+
+.formats__ages-card {
+    background-color: #fff;
+    padding: 3.2rem 4rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.4rem 0.8rem 2.4rem rgba(0, 0, 0, 0.06);
+    border-radius: 0.4rem;
+}
+
+.formats__ages-card-age {
+    margin-bottom: 2.4rem;
+}
+
+.formats__ages-card-amount {
+    font-weight: 900;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.formats__ages-card-unit {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.formats__ages-card-text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+}

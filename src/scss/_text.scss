@@ -1,0 +1,11 @@
+.section-heading {
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 150%;
+
+    @include breakpoint(mobile) {
+        br {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.page-footer {
+    background: #1a1a1a;
+    color: white;
+}
+
+.page-footer__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 5.6rem 0;
+}
+
+.page-footer__col {
+    display: flex;
+    align-items: center;
+}
+
+.page-footer__logo-image {
+    width: 16.6rem;
+    display: block;
+    height: auto;
+}
+
+.page-footer__policy {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-right: 3rem;
+}
+
+.page-footer__scroll-up {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-left: auto;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
