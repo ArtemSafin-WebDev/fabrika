@@ -1,0 +1,86 @@
+.environment {
+    margin-bottom: 16rem;
+}
+
+.environment__card {
+    position: relative;
+    z-index: 1;
+    padding: 8rem 2rem;
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 52rem;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.8rem 2.4rem rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.environment__card-bg {
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+}
+
+.environment__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.environment__text {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 170%;
+    letter-spacing: 0.04em;
+    max-width: 82rem;
+}
+
+.environment__card-heading {
+    text-transform: uppercase;
+}
+
+.environment__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 10rem;
+}
+
+.environment__small-text {
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 170%;
+    letter-spacing: 0.04em;
+    max-width: 50rem;
+}
+
+.environment__large-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 170%;
+    letter-spacing: 0.04em;
+    margin-bottom: 6.4rem;
+    max-width: 54rem;
+}

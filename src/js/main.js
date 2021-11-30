@@ -15,6 +15,7 @@ import fixedHeader from './fixedHeader';
 import willLearn from './willLearn';
 import ourPartners from './ourPartners';
 import mentorsSlider from './mentorsSlider';
+import achivementsSlider from './achivementsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     willLearn();
     ourPartners();
     mentorsSlider();
+    achivementsSlider();
 });
 
 window.addEventListener('load', function() {

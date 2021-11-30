@@ -20,7 +20,7 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
-    font-size: clamp(5px, 0.6vw, 25px);
+    font-size: clamp(5px, 0.52vw, 25px);
     -webkit-text-size-adjust: 100%;
   
     @include noHighlight();
