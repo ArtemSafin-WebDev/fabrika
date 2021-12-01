@@ -88,3 +88,6 @@ typings/
 # MacOS Files
 
 .DS_Store
+
+# IDE / Editor
+.idea
