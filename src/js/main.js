@@ -16,6 +16,8 @@ import willLearn from './willLearn';
 import ourPartners from './ourPartners';
 import mentorsSlider from './mentorsSlider';
 import achivementsSlider from './achivementsSlider';
+import citySearch from './citySearch';
+import fancybox from './fancybox';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -35,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ourPartners();
     mentorsSlider();
     achivementsSlider();
+    citySearch();
+    fancybox();
 });
 
 window.addEventListener('load', function() {

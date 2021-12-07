@@ -8,6 +8,10 @@
     background-color: var(--white-color);
     transition: box-shadow .3s;
 
+    .modal-open & {
+        padding-right: var(--sb-width, 0);
+    }
+
     &.fixed {
         box-shadow: 0px 0px 2.4rem rgba(0, 0, 0, 0.05);
     }
