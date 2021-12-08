@@ -9,7 +9,12 @@ export default function mentorsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             watchOverflow: true,
-            spaceBetween: 55
+            spaceBetween: 40,
+            breakpoints: {
+                641: {
+                    spaceBetween: 55
+                }
+            }
         });
     });
 }

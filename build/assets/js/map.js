@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
 
             var mapInstance = new ymaps.Map(mapElement, {
-                center: center ?? coords,
+                center: window.matchMedia('(max-width: 640px)').matches ? coords : center ?? coords,
                 zoom: 14,
                 controls: []
             });
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var objectManager = new ymaps.ObjectManager({
                 clusterize: false,
                 clusterHasBalloon: false,
-                geoObjectOpenBalloonOnClick: true
+                geoObjectOpenBalloonOnClick: false
             });
             mapInstance.geoObjects.add(objectManager);
 
@@ -229,7 +229,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 objectManager.add(objectToAdd);
             });
 
-            objectManager.objects.balloon.open(coords);
+            if (!window.matchMedia('(max-width: 640px)').matches) {
+                objectManager.objects.balloon.open(coords);
+            }
         }
     });
 });

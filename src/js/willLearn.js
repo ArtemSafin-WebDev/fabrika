@@ -10,6 +10,8 @@ export default function willLearn() {
 
         const instances = [];
 
+        const OFFSET = window.matchMedia('(max-width: 640px)').matches ? 32 : 64;
+
         sliders.forEach((slider, sliderIndex) => {
             const container = slider.querySelector('.swiper-container');
 
@@ -18,8 +20,8 @@ export default function willLearn() {
                 watchOverflow: true,
                 loop: true,
                 loopedSlides: 7,
-                spaceBetween: 64,
-                slidesOffsetBefore: sliderIndex * ((document.querySelector('.will-learn__slider-card')?.offsetWidth || 0) / 2 + 64 / 2)
+                spaceBetween: OFFSET,
+                slidesOffsetBefore: sliderIndex * ((document.querySelector('.will-learn__slider-card')?.offsetWidth || 0) / 2 + OFFSET / 2)
             });
 
             instances.push(instance);

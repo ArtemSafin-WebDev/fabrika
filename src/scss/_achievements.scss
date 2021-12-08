@@ -1,9 +1,16 @@
 .achievements {
     margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .achievements__heading {
     margin-bottom: 4.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .achievements__slider {
@@ -13,6 +20,9 @@
 
     .swiper-slide {
         width: 61rem;
+        @include breakpoint(mobile) {
+            width: 20rem;
+        }
     }
 }
 
@@ -30,6 +40,11 @@
     display: grid;
     grid-template-columns: minmax(0, 27rem) minmax(0, 1fr);
     grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.6rem;
+    }
 }
 
 .achievements__card-content {
@@ -65,6 +80,13 @@
     font-size: 1.8rem;
     line-height: 150%;
     margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 150%;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .achievements__card-text {
@@ -72,11 +94,21 @@
     font-size: 1.4rem;
     line-height: 150%;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 150%;
+        margin-bottom: 2.4rem;
+    }
 }
 
 .achievements__card-specs-list {
     margin-top: auto;
     margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -84,6 +116,10 @@
 
 .achievements__card-specs-list-item {
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -97,6 +133,13 @@
     text-transform: uppercase;
     color: var(--primary-color);
     margin-bottom: 0.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 900;
+        font-size: 1rem;
+        line-height: 150%;
+        letter-spacing: 0.08em;
+    }
 }
 
 .achievements__card-value {
@@ -104,10 +147,22 @@
     font-size: 1.4rem;
     line-height: 150%;
 
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
+
     b {
         font-weight: bold;
         font-size: 2rem;
         line-height: 150%;
+
+        @include breakpoint(mobile) {
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
     }
 }
 
@@ -131,6 +186,5 @@
         background: var(--primary-color);
         transition: transform 0.2s;
         transform-origin: left center;
-        
     }
 }

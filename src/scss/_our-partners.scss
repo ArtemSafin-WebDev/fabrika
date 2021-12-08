@@ -1,9 +1,17 @@
 .our-partners {
     margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .our-partners__heading {
     margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4.5rem;
+    }
     
 }
 
@@ -14,6 +22,10 @@
 
     .swiper-slide {
         width: 27rem;
+
+        @include breakpoint(mobile) {
+            width: 14rem;
+        }
     }
 }
 
@@ -27,6 +39,10 @@
         content: '';
         display: block;
         padding-bottom: 38%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 56.25%;
+        }
     }
 }
 

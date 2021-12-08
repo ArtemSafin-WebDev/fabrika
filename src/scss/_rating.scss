@@ -1,5 +1,8 @@
 .rating {
     margin-bottom: 27rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .rating__row {
@@ -7,14 +10,25 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 4rem;
     align-items: center;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4.5rem;
+    }
 }
 
 .rating__heading {
     font-weight: 900;
     font-size: 3.2rem;
     line-height: 150%;
-    
+
     margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 900;
+        font-size: 1.8rem;
+        line-height: 150%;
+        margin-bottom: 4.8rem;
+    }
 }
 
 .rating__list {
@@ -34,6 +48,15 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 180%;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
     &::before {
         content: counter(ordered-list, decimal-leading-zero);
         font-weight: 900;
@@ -42,6 +65,13 @@
         letter-spacing: 0.04em;
         color: var(--primary-color);
         margin-right: 8rem;
+
+        @include breakpoint(mobile) {
+            font-weight: 900;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            margin-right: 4rem;
+        }
     }
 }
 
@@ -66,6 +96,10 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.06) 100%);
+
+        @include breakpoint(mobile) {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        }
     }
 }
 
@@ -81,8 +115,18 @@
     z-index: 16;
     position: absolute;
     color: white;
-}
 
+    @include breakpoint(mobile) {
+        left: 1.6rem;
+        right: 1.6rem;
+        bottom: 2.4rem;
+        top: auto;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 170%;
+        letter-spacing: 0.04em;
+    }
+}
 
 .rating__photo {
     position: absolute;

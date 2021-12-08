@@ -15,6 +15,10 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+
     &:not(.active) {
         right: calc(-1 * var(--sb-width, 0));
     }
@@ -39,6 +43,15 @@
     border-radius: 1rem;
     color: black;
     position: relative;
+
+    @include breakpoint(mobile) {
+        border-radius: 0;
+        padding: 3.2rem var(--content-padding);
+        box-shadow: none;
+        max-width: none;
+        margin: 0;
+        flex-grow: 1;
+    }
 }
 
 .modal__close {
@@ -47,6 +60,13 @@
     position: absolute;
     width: 2rem;
     height: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 2rem;
+        height: 2rem;
+        top: 2.4rem;
+        right: 2.4rem;
+    }
     svg {
         display: block;
         width: 100%;
@@ -67,6 +87,13 @@
     font-size: 4rem;
     line-height: 150%;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+        max-width: 22rem;
+    }
 }
 
 .modal__text {
@@ -74,16 +101,32 @@
     font-size: 1.8rem;
     margin-top: 0.8rem;
     line-height: 150%;
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 150%;
+        margin-top: 2.4rem;
+    }
 }
 
 .modal__form {
     margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2.4rem;
+    }
 
     .parsley-errors-list.filled {
         margin-top: 1rem;
         color: var(--primary-color);
         font-size: 1.4rem;
         line-height: 1.2;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            margin-top: 0.8rem;
+        }
     }
 }
 
@@ -91,6 +134,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 2.4rem;
+    @include breakpoint(mobile) {
+        grid-gap: 1.6rem;
+    }
 }
 
 .modal__form-input {
@@ -105,6 +151,14 @@
     line-height: 150%;
     letter-spacing: 0.04em;
     transition: border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        height: 5.4rem;
+        padding: 0 1.6rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
 
     &.parsley-error {
         border-color: var(--primary-color);
@@ -122,12 +176,20 @@ textarea.modal__form-input {
     resize: none;
     width: 100%;
     display: block;
+
+    @include breakpoint(mobile) {
+        height: 13rem;
+    }
 }
 
 .modal__form-submit {
     display: flex;
     margin-top: 4rem;
     width: 100%;
+
+    @include breakpoint(mobile) {
+        margin-top: 2.4rem;
+    }
 }
 
 .modal__form-checkbox {
@@ -175,6 +237,11 @@ textarea.modal__form-input {
     font-size: 1.2rem;
     line-height: 150%;
     letter-spacing: 0.04em;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 150%;
+    }
 }
 
 .modal__form-checkbox-input:checked ~ .modal__form-checkbox-mark::before {
@@ -208,6 +275,12 @@ textarea.modal__form-input {
     background-size: 2.4rem 2.4rem;
     @include placeholder {
         color: rgba(#1a1a1a, 0.4);
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 150%;
     }
 }
 

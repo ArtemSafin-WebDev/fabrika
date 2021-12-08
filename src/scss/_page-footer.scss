@@ -7,6 +7,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 5.6rem 0;
+
+    @include breakpoint(mobile) {
+        padding-top: 2.4rem;
+        padding-bottom: 5rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .page-footer__col {
@@ -18,6 +24,11 @@
     width: 16.6rem;
     display: block;
     height: auto;
+
+    @include breakpoint(mobile) {
+        width: 10.7rem;
+        margin-bottom: 3.2rem;
+    }
 }
 
 .page-footer__policy {
@@ -28,6 +39,13 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     margin-right: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-right: 0;
+    }
 }
 
 .page-footer__scroll-up {
@@ -38,6 +56,10 @@
     text-transform: uppercase;
     color: var(--primary-color);
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     &:link,
     &:visited {
         color: var(--primary-color);

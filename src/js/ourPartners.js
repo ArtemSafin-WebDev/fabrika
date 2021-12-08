@@ -9,7 +9,12 @@ export default function ourPartners() {
         new Swiper(container, {
             slidesPerView: 'auto',
             watchOverflow: true,
-            spaceBetween: 40
+            spaceBetween: 16,
+            breakpoints: {
+                641: {
+                    spaceBetween: 40,
+                }
+            }
         });
     });
 }

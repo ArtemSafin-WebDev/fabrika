@@ -18,6 +18,10 @@ import mentorsSlider from './mentorsSlider';
 import achivementsSlider from './achivementsSlider';
 import citySearch from './citySearch';
 import fancybox from './fancybox';
+import agesSlider from './agesSlider';
+import menu from './menu';
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -39,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
     achivementsSlider();
     citySearch();
     fancybox();
+    agesSlider();
+    menu();
 });
 
 window.addEventListener('load', function() {
