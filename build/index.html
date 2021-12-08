@@ -1875,7 +1875,46 @@
                     </div>
                 </div>
             </div>
-        </div>        <style>
+        </div>        <div class="loader">
+            <img src="img/logo-white.svg" alt="" class="loader__logo">
+        </div>
+        
+        <style>
+            .loader {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 300;
+                background-color: #FEBA00;
+                
+            }
+        
+            .loader-removed .loader {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .4s, visibility 0s linear .4s;
+            }
+        
+            .loader__logo {
+                width: 20rem;
+                height: auto;
+                margin: auto;
+        
+                
+            }
+        
+            @media screen and (max-width: 640px) {
+                 .loader__logo {
+                     width: 12rem;
+                 }
+            }
+        </style>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;
