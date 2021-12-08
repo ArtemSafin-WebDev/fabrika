@@ -1,6 +1,6 @@
-import { Swiper, Controller } from 'swiper';
+import { Swiper, Controller, Autoplay } from 'swiper';
 
-Swiper.use([Controller]);
+Swiper.use([Controller, Autoplay]);
 
 export default function willLearn() {
     const elements = Array.from(document.querySelectorAll('.js-will-learn'));
@@ -21,7 +21,13 @@ export default function willLearn() {
                 loop: true,
                 loopedSlides: 7,
                 spaceBetween: OFFSET,
-                slidesOffsetBefore: sliderIndex * ((document.querySelector('.will-learn__slider-card')?.offsetWidth || 0) / 2 + OFFSET / 2)
+                slidesOffsetBefore: sliderIndex * ((document.querySelector('.will-learn__slider-card')?.offsetWidth || 0) / 2 + OFFSET / 2),
+                speed: 3500,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false
+                }
             });
 
             instances.push(instance);

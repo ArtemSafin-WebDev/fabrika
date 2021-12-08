@@ -150,6 +150,11 @@
 
 .where-to-find__mobile-info {
     margin-bottom: 2.5rem;
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
 }
 
 .where-to-find__mobile-info-item {
@@ -195,7 +200,7 @@
         background: var(--primary-color);
         transition: transform 0.2s;
         transform-origin: left center;
-       
+
         transform: scaleX(1);
     }
 

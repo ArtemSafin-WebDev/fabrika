@@ -23,6 +23,10 @@
         overflow: visible;
     }
 
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+
     .swiper-slide {
         width: 29rem;
 
