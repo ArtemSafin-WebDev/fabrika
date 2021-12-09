@@ -1,5 +1,8 @@
 .faq {
     margin-bottom: 16rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 
     .inner-container {
         display: flex;
@@ -9,6 +12,10 @@
 
 .faq__heading {
     margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.2rem;
+    }
 }
 
 .faq__accordion {
@@ -27,6 +34,15 @@
     line-height: 150%;
     min-height: 9.6rem;
     cursor: pointer;
+    padding: 1rem 0;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 150%;
+        padding: 1.8rem 0;
+        min-height: 8.2rem;
+    }
     svg {
         width: 2.4rem;
         height: 2.4rem;
@@ -62,9 +78,22 @@
     font-size: 1.6rem;
     line-height: 150%;
     max-width: 89rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        padding-bottom: 1.8rem;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
 }
 
 .faq__link {
     align-self: center;
     margin-top: 6.4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4.8rem;
+        align-self: stretch;
+    }
 }

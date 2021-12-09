@@ -1,16 +1,29 @@
 .interactive-learning {
     margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .interactive-learning__row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 10rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 4rem;
+    }
 }
 
 .interactive-learning__col:nth-child(1) {
     @include breakpointMF(small-tablet) {
         padding-top: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
     }
 }
 
@@ -24,6 +37,13 @@
     line-height: 170%;
     letter-spacing: 0.04em;
     margin-bottom: 6.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 170%;
+        margin-bottom: 2.4rem;
+    }
     p {
         margin-bottom: 1.5rem;
         &:last-child {
@@ -38,6 +58,14 @@
     line-height: 170%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 170%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
 }
 
 .interactive-learning__list-item {
@@ -50,6 +78,16 @@
         color: var(--primary-color);
         line-height: 170%;
         margin-right: 12rem;
+
+        @include breakpoint(mobile) {
+            font-weight: 900;
+            font-size: 1.2rem;
+            line-height: 170%;
+            letter-spacing: 0.04em;
+            margin: 0;
+            width: 6.5rem;
+            display: inline-block;
+        }
     }
     &:last-child {
         margin-bottom: 0;
@@ -59,5 +97,9 @@
 .interactive-learning__image {
     width: 58rem;
     height: auto;
-    
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+    }
 }

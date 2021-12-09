@@ -15,6 +15,11 @@
     --white-color: #FCFCFC;
     --text-color: #1A1A1A;
     --montserrat: 'Montserrat', sans-serif;
+
+
+    @include breakpoint(mobile) {
+        --content-padding: 1.6rem;
+    }
 }
 
 html {
@@ -24,6 +29,10 @@ html {
     -webkit-text-size-adjust: 100%;
   
     @include noHighlight();
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {

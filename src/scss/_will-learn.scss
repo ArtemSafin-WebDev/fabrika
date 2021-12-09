@@ -1,9 +1,16 @@
 .will-learn {
     margin-bottom: 16rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .will-learn__heading {
     margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
 }
 
 .will-learn__sliders {
@@ -16,8 +23,16 @@
         overflow: visible;
     }
 
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+
     .swiper-slide {
         width: 29rem;
+
+        @include breakpoint(mobile) {
+            width: 20rem;
+        }
     }
     &:last-child {
         margin-bottom: 0;
@@ -39,4 +54,12 @@
     letter-spacing: 0.02em;
     padding: 1rem;
     min-height: 8.6rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 150%;
+        padding: 1rem;
+        min-height: 5.2rem;
+    }
 }

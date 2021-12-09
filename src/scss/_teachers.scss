@@ -1,5 +1,9 @@
 .teachers {
     margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4.8rem;
+    }
     .inner-container {
         display: flex;
         flex-direction: column;
@@ -8,6 +12,9 @@
 
 .teachers__heading {
     margin-bottom: 4.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
 }
 
 .teachers__row {
@@ -15,6 +22,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 4rem;
     margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.6rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .teachers__large-text {
@@ -22,6 +35,11 @@
     font-size: 1.8rem;
     line-height: 150%;
     letter-spacing: 0.04em;
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 150%;
+    }
 }
 
 .teachers__small-text {
@@ -29,18 +47,35 @@
     font-size: 2rem;
     line-height: 170%;
     letter-spacing: 0.04em;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 180%;
+        letter-spacing: 0.02em;
+    }
 }
 
 .teachers__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-row-gap: 4rem;
+    }
 }
 
 .teachers__card {
     display: grid;
     grid-template-columns: 27rem minmax(0, 1fr);
     grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.2rem;
+    }
 }
 
 .teachers__card-image-container {
@@ -49,6 +84,10 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+    }
     &::before {
         content: '';
         display: block;
@@ -73,6 +112,10 @@
 .teachers__card-name {
     margin-bottom: 3rem;
     margin-top: -0.8rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 
 .teachers__card-last-name {
@@ -81,6 +124,13 @@
     line-height: 150%;
     letter-spacing: 0.04em;
     margin-bottom: 0.2rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+    }
 }
 
 .teachers__card-first-name {
@@ -88,6 +138,11 @@
     font-size: 1.8rem;
     line-height: 150%;
     letter-spacing: 0.04em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
 }
 
 .teachers__card-text {
@@ -95,9 +150,16 @@
     font-size: 1.6rem;
     line-height: 150%;
     letter-spacing: 0.04em;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .teachers__link {
     align-self: center;
     margin-top: 6.5rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

@@ -18,6 +18,8 @@ import mentorsSlider from './mentorsSlider';
 import achivementsSlider from './achivementsSlider';
 import citySearch from './citySearch';
 import fancybox from './fancybox';
+import agesSlider from './agesSlider';
+import menu from './menu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -39,9 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
     achivementsSlider();
     citySearch();
     fancybox();
+    agesSlider();
+    menu();
+
+    setTimeout(() => {
+        document.body.classList.add('loader-removed');
+    }, 2500);
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    document.body.classList.add('loader-removed');
     setTimeout(() => document.body.classList.add('animatable'), 300);
-})
+});
