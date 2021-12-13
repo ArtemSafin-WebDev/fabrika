@@ -22,7 +22,7 @@ export default function willLearn() {
                 loopedSlides: 7,
                 spaceBetween: OFFSET,
                 slidesOffsetBefore: sliderIndex * ((document.querySelector('.will-learn__slider-card')?.offsetWidth || 0) / 2 + OFFSET / 2),
-                speed: 3500,
+                speed: 7000,
                 allowTouchMove: false,
                 autoplay: {
                     delay: 0,

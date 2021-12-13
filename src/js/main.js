@@ -20,6 +20,8 @@ import citySearch from './citySearch';
 import fancybox from './fancybox';
 import agesSlider from './agesSlider';
 import menu from './menu';
+import counter from './counter';
+import showMore from './showMore';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fancybox();
     agesSlider();
     menu();
+    counter();
+    showMore();
 
     setTimeout(() => {
         document.body.classList.add('loader-removed');

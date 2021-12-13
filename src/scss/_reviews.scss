@@ -31,6 +31,14 @@
     }
 }
 
+.reviews__list-item--hidden {
+    display: none;
+
+    .all-shown & {
+        display: block;
+    }
+}
+
 .reviews__card {
     display: flex;
     flex-direction: column;
@@ -116,7 +124,6 @@
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
-        
     }
 }
 
@@ -179,7 +186,6 @@
 
         @include breakpoint(mobile) {
             margin-left: 3.2rem;
-           
         }
     }
 }
@@ -187,6 +193,10 @@
 .reviews__link {
     margin-top: 4.8rem;
     align-self: center;
+
+    .all-shown & {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         margin-top: 3.2rem;

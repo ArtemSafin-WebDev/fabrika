@@ -67,6 +67,14 @@
     }
 }
 
+.teachers__list-item--hidden {
+    display: none;
+
+    .all-shown & {
+        display: block;
+    }
+}
+
 .teachers__card {
     display: grid;
     grid-template-columns: 27rem minmax(0, 1fr);
@@ -158,6 +166,10 @@
 .teachers__link {
     align-self: center;
     margin-top: 6.5rem;
+
+    .all-shown & {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         display: none;
