@@ -12,12 +12,15 @@
     @include breakpoint(mobile) {
         margin-bottom: 4.5rem;
     }
-    
 }
 
 .our-partners__slider {
     .swiper-container {
         overflow: visible;
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
     }
 
     .swiper-slide {

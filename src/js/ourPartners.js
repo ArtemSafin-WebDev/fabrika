@@ -1,4 +1,6 @@
-import { Swiper } from 'swiper';
+import { Swiper, Autoplay } from 'swiper';
+
+Swiper.use([Autoplay]);
 
 export default function ourPartners() {
     const elements = Array.from(document.querySelectorAll('.js-partners-slider'));
@@ -10,9 +12,17 @@ export default function ourPartners() {
             slidesPerView: 'auto',
             watchOverflow: true,
             spaceBetween: 16,
+            loop: true,
+            loopedSlides: 7,
+            allowTouchMove: false,
+            speed: 6000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false
+            },
             breakpoints: {
                 641: {
-                    spaceBetween: 40,
+                    spaceBetween: 40
                 }
             }
         });
