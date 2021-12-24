@@ -15,6 +15,46 @@
         grid-template-columns: minmax(0, 1fr);
         grid-gap: 4rem;
     }
+    ol {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 170%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        @include breakpoint(mobile) {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 170%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        li {
+            margin-bottom: 3.2rem;
+            &::before {
+                content: counter(ordered-list, decimal-leading-zero);
+                font-weight: 900;
+                font-size: 1.8rem;
+                letter-spacing: 0.04em;
+                color: var(--primary-color);
+                line-height: 170%;
+                margin-right: 12rem;
+
+                @include breakpoint(mobile) {
+                    font-weight: 900;
+                    font-size: 1.2rem;
+                    line-height: 170%;
+                    letter-spacing: 0.04em;
+                    margin: 0;
+                    width: 6.5rem;
+                    display: inline-block;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .interactive-learning__col:nth-child(1) {
