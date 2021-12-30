@@ -76,8 +76,14 @@
 .formats__ages-list {
     @include breakpointMF(small-tablet) {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-gap: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4rem;
     }
 }
 
@@ -112,11 +118,11 @@
 
     @include breakpoint(mobile) {
         font-weight: 900;
-        font-size: 3.2rem;
-        line-height: 3.9rem;
+        font-size: 2.9rem;
+        line-height: 3.5rem;
         letter-spacing: 0.02em;
         text-transform: uppercase;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.2rem;
     }
 }
 
@@ -128,11 +134,10 @@
     text-transform: uppercase;
 
     @include breakpoint(mobile) {
-        font-weight: 900;
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        letter-spacing: 0.02em;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
         text-transform: uppercase;
+        margin-bottom: 1.4rem;
     }
 }
 
@@ -144,9 +149,8 @@
 
     @include breakpoint(mobile) {
         font-weight: 600;
-        font-size: 1.4rem;
+        font-size: 1rem;
         line-height: 150%;
-        letter-spacing: 0.04em;
     }
 }
 
@@ -155,9 +159,5 @@
         overflow: visible;
     }
 
-    @include breakpoint(mobile) {
-        .swiper-slide {
-            width: 21rem;
-        }
-    }
+   
 }

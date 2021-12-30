@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     achivementsSlider();
     citySearch();
     fancybox();
-    agesSlider();
+    // agesSlider();
     menu();
     counter();
     showMore();
