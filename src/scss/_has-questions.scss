@@ -38,9 +38,9 @@
 }
 
 .has-questions__contacts-block {
-    margin-bottom: 7rem;
+    margin-bottom: 4.5rem;
     @include breakpoint(mobile) {
-        margin-bottom: 4rem;
+        margin-bottom: 2.2rem;
     }
     &:last-child {
         margin-bottom: 0;
@@ -53,7 +53,7 @@
     line-height: 1.2;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: .5rem;
     color: var(--primary-color);
     @include breakpoint(mobile) {
         font-weight: bold;
@@ -67,17 +67,29 @@
     font-weight: 600;
     font-size: 3.2rem;
     line-height: 150%;
+    margin-bottom: 0.5rem;
 
     @include breakpoint(mobile) {
         font-weight: 600;
         font-size: 2.4rem;
         line-height: 150%;
+        margin-bottom: 0.8rem;
     }
 
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);
     }
+}
+
+.has-questions__contacts-block-description {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    max-width: 40rem;
 }
 
 .has-questions__form {
