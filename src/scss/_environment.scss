@@ -118,6 +118,11 @@
     }
 }
 
+.environment__col {
+    display: flex;
+    flex-direction: column;
+}
+
 .environment__small-text {
     font-weight: normal;
     font-size: 2rem;
@@ -133,18 +138,27 @@
 }
 
 .environment__large-text {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 170%;
     letter-spacing: 0.04em;
-    margin-bottom: 6.4rem;
-    max-width: 54rem;
+   
+    max-width: 58rem;
     @include breakpoint(mobile) {
         max-width: none;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 1.4rem;
         letter-spacing: 0.04em;
         line-height: 170%;
-        margin-bottom: 3.2rem;
+       
+    }
+}
+
+.environment__btn {
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: 2rem;
     }
 }
