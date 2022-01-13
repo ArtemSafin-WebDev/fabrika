@@ -9,13 +9,14 @@ export default function showMore() {
     elements.forEach(element => {
         const btn = element.querySelector('.js-show-more-btn');
 
+        if (btn) {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
 
-        btn.addEventListener('click', event => {
-            event.preventDefault();
+                element.classList.add('all-shown');
 
-            element.classList.add('all-shown');
-
-            ScrollTrigger.refresh();
-        });
+                ScrollTrigger.refresh();
+            });
+        }
     });
 }
