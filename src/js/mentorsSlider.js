@@ -1,4 +1,6 @@
-import { Swiper } from 'swiper';
+import { Swiper, Navigation } from 'swiper';
+
+Swiper.use([Navigation]);
 
 export default function mentorsSlider() {
     const elements = Array.from(document.querySelectorAll('.js-mentors-slider'));
@@ -10,6 +12,10 @@ export default function mentorsSlider() {
             slidesPerView: 'auto',
             watchOverflow: true,
             spaceBetween: 40,
+            navigation: {
+                nextEl: element.querySelector('.mentors__slider-move'),
+                prevEl: null
+            },
             breakpoints: {
                 641: {
                     spaceBetween: 55

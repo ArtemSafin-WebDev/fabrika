@@ -159,7 +159,11 @@
     line-height: 150%;
     letter-spacing: 0.04em;
     @include breakpoint(mobile) {
-        display: none;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        margin-top: 2rem;
     }
 }
 
