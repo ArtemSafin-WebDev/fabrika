@@ -57,18 +57,100 @@
 }
 
 .page-header__city {
+    margin-right: 3rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.page-header__city-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: max-content;
+    padding-top: 1rem;
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s, visibility 0s linear .2s;
+    }
+}
+
+.page-header__city-dropdown-inner {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 .5rem 0.5rem rgba(black, 0.15);
+    border-radius: 1rem;
+}
+
+.page-header__city-dropdown-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        flex-shrink: 0;
+        margin-right: 1.5rem;
+        fill: currentColor;
+    }
+
+    b {
+        font-weight: 600;
+    }
+}
+
+.page-header__city-dropdown-btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.page-header__city-dropdown-choose {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 0.2rem;
+        background: var(--primary-color);
+        transition: transform 0.2s;
+        transform-origin: left center;
+        transform: scaleX(0);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.page-header__city-btn {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 150%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     position: relative;
-    margin-right: 3rem;
+
     white-space: nowrap;
 
-    @include breakpoint(mobile) {
-        display: none;
-    }
     &::before {
         content: '';
         position: absolute;
@@ -172,12 +254,12 @@
     padding-bottom: 4rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility .4s;
+    transition: opacity 0.4s, visibility 0.4s;
 
     .mobile-menu-open & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
     }
 }
 
@@ -255,16 +337,15 @@
 
             .mobile-menu-open & {
                 &:nth-child(1) {
-                    transform: translateY(.6rem) rotate(45deg);
+                    transform: translateY(0.6rem) rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateY(-.6rem) rotate(-45deg);
+                    transform: translateY(-0.6rem) rotate(-45deg);
                 }
             }
-            
         }
     }
 }

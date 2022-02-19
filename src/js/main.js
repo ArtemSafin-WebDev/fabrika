@@ -22,6 +22,7 @@ import agesSlider from './agesSlider';
 import menu from './menu';
 import counter from './counter';
 import showMore from './showMore';
+import cityDropdown from './cityDropdown';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     counter();
     showMore();
+    cityDropdown();
 
     setTimeout(() => {
         document.body.classList.add('loader-removed');

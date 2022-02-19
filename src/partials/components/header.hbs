@@ -51,9 +51,33 @@
             <a href="#" class="page-header__logo">
                 <img src="img/logo.svg" alt="" class="page-header__logo-image" width="166">
             </a>
-            <a href="#choose-city" class="page-header__city js-open-modal">
-                Выбрать город
-            </a>
+            <div class="page-header__city">
+                <a href="#choose-city" class="page-header__city-btn js-open-modal">
+                    Казань
+                </a>
+                <div class="page-header__city-dropdown">
+                    <div class="page-header__city-dropdown-inner">
+                        <h3 class="page-header__city-dropdown-heading">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-city">
+                                <use xlink:href="#city"></use>
+                            </svg>
+                            <span class="page-header__city-dropdown-heading-text">
+                                Ваш город <b>Казань</b>?
+                            </span>
+
+                        </h3>
+                        <div class="page-header__city-dropdown-btns">
+                            <a href="#" class="yellow-btn">
+                                Все верно
+                            </a>
+                            <a href="#choose-city" class="page-header__city-dropdown-choose js-open-modal">
+                                Выбрать город
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <nav class="page-header__nav">
                 <ul>
                     <li>
