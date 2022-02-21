@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     counter();
     showMore();
-    cityDropdown();
+    // cityDropdown();
 
     setTimeout(() => {
         document.body.classList.add('loader-removed');
