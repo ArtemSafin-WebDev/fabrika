@@ -23,6 +23,7 @@ import menu from './menu';
 import counter from './counter';
 import showMore from './showMore';
 import cityDropdown from './cityDropdown';
+import selectCountry from './selectCountry';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     counter();
     showMore();
+    selectCountry();
     // cityDropdown();
 
     setTimeout(() => {

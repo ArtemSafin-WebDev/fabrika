@@ -1929,7 +1929,7 @@
                                 телефон / whatsapp
                             </h3>
                             <a href="tel:+79656198032" class="has-questions__contacts-block-link">
-                               +7 965 619 80 32
+                                +7 965 619 80 32
                             </a>
                             <div class="has-questions__contacts-block-description">
                                 <p>
@@ -1947,11 +1947,48 @@
                     <form action="/" method="POST" class="has-questions__form" data-need-validation="">
                         <div class="has-questions__form-fields">
                             <div class="has-questions__form-field">
-                                <input type="text" name="name" class="has-questions__form-input" placeholder="Ваше имя">
+                                <input type="text" name="name" class="has-questions__form-input" placeholder="Ваше имя" required="">
                             </div>
-                            <div class="has-questions__form-field">
-                                <input type="tel" name="phone" class="has-questions__form-input js-phone-input"
-                                    placeholder="+7 (___) ___ - __ - __" required="" data-parsley-phone="">
+                            <div class="has-questions__form-field" id="country">
+                                <div class="has-questions__form-select-country js-select-country">
+                                    <div class="has-questions__form-select-country-current js-select-btn">
+                                        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/325/flag-russia_1f1f7-1f1fa.png"
+                                            class="js-current-flag" alt="">
+                                    </div>
+
+                                    <input type="tel" name="phone"
+                                        class="has-questions__form-input js-select-country-input"
+                                        placeholder="+7 (___) ___ - __ - __" data-parsley-errors-container="#country" data-parsley-class-handler="#country" required="" data-parsley-country="" >
+                                    <div class="has-questions__form-select-country-dropdown">
+                                        <div class="has-questions__form-select-country-dropdown-inner">
+                                            <ul class="has-questions__form-select-country-list">
+                                                <li class="has-questions__form-select-country-list-item">
+                                                    <div class="has-questions__form-select-country-card js-select-country-card"
+                                                        data-mask="+7 (999) 999-99-99"
+                                                        data-placeholder="+7 (___) ___ - __ - __">
+
+                                                        Россия
+                                                        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/325/flag-russia_1f1f7-1f1fa.png"
+                                                            alt="">
+                                                        +7
+                                                    </div>
+                                                </li>
+                                                <li class="has-questions__form-select-country-list-item">
+                                                    <div class="has-questions__form-select-country-card js-select-country-card"
+                                                        data-mask="+375-99-999-99-99"
+                                                        data-placeholder="+375-__-___-__-__">
+                                                        Беларусь
+                                                        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/flag-belarus_1f1e7-1f1fe.png"
+                                                            alt="">
+                                                        +375
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="has-questions__form-field">
                                 <input type="text" name="comment" class="has-questions__form-input"
