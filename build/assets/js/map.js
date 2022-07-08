@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const address = mapElement.getAttribute('data-address');
             const phone = mapElement.getAttribute('data-phone');
             const instagram = mapElement.getAttribute('data-instagram');
+            const vk = mapElement.getAttribute('data-vk');
             const center = mapElement.hasAttribute('data-center') ? mapElement.getAttribute('data-center').split(',') : null;
 
             console.log('Coords', coords);
@@ -52,7 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
                                     : ''
                             }
                         </div>
-                        ${instagram ? `<a class="popover-link" href="${instagram}">instagram</a>` : ''}
+                        <div class="popover-links">
+                            ${instagram ? `<a class="popover-link" href="${instagram}">instagram</a>` : ''}
+                            ${vk ? `<a class="popover-link" href="${vk}">vk</a>` : ''}
+                        </div>
                     
                     `
                 }

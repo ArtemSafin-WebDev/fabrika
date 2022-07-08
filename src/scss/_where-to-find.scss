@@ -118,6 +118,13 @@
     line-height: 150%;
 }
 
+.popover-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 .popover-link {
     font-weight: bold;
     font-size: 1.4rem;
