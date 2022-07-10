@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="popover-links">
                             ${instagram ? `<a class="popover-link" href="${instagram}">instagram</a>` : ''}
-                            ${vk ? `<a class="popover-link" href="${vk}">vk</a>` : ''}
+                            ${vk ? `<a class="popover-link" href="${vk}">ВКОНТАКТЕ</a>` : ''}
                         </div>
                     
                     `
